@@ -2,10 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
-
+* **Name**: JEYA SHIVANI S
+* **Register Number**: 212224050015
+* **Date of Submission**: 24.05.2026
 ---
 
 ## Objective
@@ -80,31 +79,49 @@ Reboot the EC2 instance and verify that the data stored in the EBS volume is sti
 
 (Write the steps you followed in your own words)
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+1. ---First, I created a VPC in Amazon Web Services. I gave it a CIDR block of 10.0.0.0/16. This
+VPC acts as my private network where all my resources will be created.
+Next, I created a public subnet inside the VPC with CIDR 10.0.1.0/24. I enabled auto-assign
+public IP so that any instance launched in this subnet will automatically get a public IP
+address.
+2--After that, I created an Internet Gateway and attached it to my VPC. This allows my VPC to
+communicate with the internet.
+Then, I created a route table and added a default route (0.0.0.0/0) pointing to the Internet
+Gateway. I associated this route table with my public subnet. This step ensures that traffic
+from my subnet can reach the internet.
+3--Next, I created a security group which acts as a virtual firewall. I allowed inbound traffic for
+SSH on port 22 and HTTP on port 80.
+4--After completing the network setup, I launched an EC2 instance using Amazon Linux 2 AMI
+with instance type t2.micro. I selected my VPC, public subnet, created security group, and
+key pair.
+5--Finally, I connected to the EC2 instance using SSH and installed the Apache web server. I
+started the service and created a simple HTML page. Then I copied the public IP address of
+the instance and opened it in a web browser. The webpage was displayed successfully.
+
 
 ---
 
 ## Output Screenshots (Attach 3)
 
 ### Screenshot 1: EBS Volume Created
+<img width="1912" height="958" alt="image" src="https://github.com/user-attachments/assets/37460f0e-ac96-451e-9439-acb6a04b1883" />
 
-(Insert Screenshot Here)
+
 
 ---
 
 ### Screenshot 2: EBS Volume Attached to EC2
 
-(Insert Screenshot Here)
+<img width="1919" height="926" alt="image" src="https://github.com/user-attachments/assets/3b4326ee-ab91-4291-85c0-d0b72bb5d2be" />
+
+
 
 ---
 
 ### Screenshot 3: Mounted Volume with Data
 
-(Insert Screenshot Here)
+<img width="1600" height="499" alt="image" src="https://github.com/user-attachments/assets/35e13ad7-e925-49f8-bbbb-f3c39a9734eb" />
+
 
 ---
 

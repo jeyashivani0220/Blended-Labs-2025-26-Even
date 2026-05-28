@@ -53,7 +53,7 @@ Attach the created EBS volume to the running EC2 instance as an additional block
 
 ### Task 4: Format the EBS Volume
 
-Connect to the EC2 instance using SSH and format the attached volume with a file system (for example, ext4).
+Connect to the EC2 instance using SSH and format the attached volume with a  file system (for example, ext4).
 
 ---
 
